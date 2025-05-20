@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/assets/css/styles.css">
+    <title>Git y GitHub</title>
+</head>
+<body>
+    <h1>¿Qué es Git y GitHub?</h1>
+    <div class="logo-container">
+        <img src="src/assets/img/git-logo.png" alt="Logo de Git" class="logo">
+        <img src="src/assets/img/github-logo.png" alt="Logo de GitHub" class="logo">
+    </div>
+
+    <section>
+        <h3>Git: El sistema de control de versiones</h3>
+        <p><strong>Git</strong> es un <mark>sistema de control de versiones distribuido</mark> creado por <em>Linus Torvalds</em> en 2005.</p>
+        <ul>
+            <li><b>Distribuido:</b> Cada desarrollador tiene una copia completa del historial.</li>
+            <li><b>Rápido:</b> Eficiente en proyectos grandes.</li>
+            <li><b>Seguro:</b> Usa SHA-1 para la integridad de los datos.</li>
+            <li><b>Ramificación poderosa:</b> Manejo eficiente de ramas.</li>
+            <li>Historial completo de cambios.</li>
+        </ul>
+        <p>
+            <mark>Repositorio</mark>: Directorio gestionado por Git.<br>
+            <mark>Commit</mark>: Instantánea de cambios.<br>
+            <mark>Rama</mark>: Línea de desarrollo.<br>
+            <mark>Stage/Index</mark>: Área de preparación.<br>
+            <mark>Merge</mark>: Combina cambios de ramas.
+        </p>
+    </section>
+
+    <section>
+        <h3>GitHub: La plataforma de colaboración</h3>
+        <p><strong>GitHub</strong> es una <em>plataforma de alojamiento</em> para proyectos Git, adquirida por <b>Microsoft</b> en 2018.</p>
+        <ul>
+            <li><b>Colaboración:</b> Facilita el trabajo en equipo.</li>
+            <li><b>GitHub Pages:</b> Hospedaje web estático.</li>
+            <li><b>Integración continua:</b> Soporte para CI/CD.</li>
+            <li><b>GitHub Actions:</b> Automatización de flujos.</li>
+            <li>Gestión de proyectos y revisión de código.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h3>Diferencias clave</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Git</th>
+                    <th>GitHub</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Sistema de control de versiones</td>
+                    <td>Plataforma de alojamiento</td>
+                </tr>
+                <tr>
+                    <td>Se instala localmente</td>
+                    <td>Servicio en la nube</td>
+                </tr>
+                <tr>
+                    <td>Gratuito y open-source</td>
+                    <td>Planes gratuitos y de pago</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <hr>
+
+    <section>
+        <h3>Flujo de trabajo típico</h3>
+        <ol>
+            <li><mark>git clone [url]</mark> - Copiar un repositorio remoto</li>
+            <li><mark>git checkout -b [nombre-rama]</mark> - Crear una nueva rama</li>
+            <li><mark>git add [archivo]</mark> - Preparar cambios</li>
+            <li><mark>git commit -m "mensaje descriptivo"</mark> - Guardar cambios localmente</li>
+            <li><mark>git push origin [nombre-rama]</mark> - Enviar cambios a GitHub</li>
+            <li>Crear Pull Request en GitHub</li>
+            <li>Revisar y fusionar cambios</li>
+        </ol>
+    </section>
+
+    <hr>
+
+    <section>
+        <h3>Comandos Git útiles</h3>
+        <pre>
+git status      # Estado del repositorio
+git log         # Historial de commits
+git diff        # Cambios no preparados
+git pull        # Obtener cambios del remoto
+git branch      # Listar ramas
+git reset       # Deshacer cambios
+        </pre>
+    </section>
+
+    <hr>
+
+    <section>
+        <h3>Contacto</h3>
+        <form class="contact-form" autocomplete="off">
+            <div class="form-group">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="subject">Asunto:</label>
+                <select id="subject" name="subject">
+                    <option value="consulta">Consulta sobre Git</option>
+                    <option value="github">Consulta sobre GitHub</option>
+                    <option value="otro">Otro tema</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Enviar mensaje</button>
+        </form>
+    </section>
+</body>
+</html>
