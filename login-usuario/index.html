@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de usuario</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Registro de Usuario</h2>
+        <form id="registracion-form">
+            
+            <div class="form-group">
+                <label for="Nombre">Nombre:</label>
+                <input type="text" id="Nombre" name="Nombre" required placeholder="Ingrese su nombre">
+                <div class="error-message" id="nameerror"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="Apellido">Apellido:</label>
+                <input type="text" id="Apellido" name="Apellido" required placeholder="Ingrese su Apellido">
+                <div class="error-message" id="apeerror"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="Email" name="email" required placeholder="Ingrese su gmail">
+                <div class="error-message" id="emailerror"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="contraseña">Contraseña:</label>
+                <input type="password" id="Contrasena" name="contraseña" required 
+                       placeholder="Ingrese su contraseña">
+                <div class="error-message" id="contraerror"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="confirmcontra">Confirmar contraseña:</label>
+                <input type="password" id="ConfirmarContraseña" name="confirmcontra" required 
+                       placeholder="Repite tu contraseña">
+                <div class="error-message" id="confirmarerror"></div>
+            </div>
+            
+            <button type="submit" id="btn">Registrarse</button>
+        </form>
+    </div>
+    <script src="static/script.js"></script>
+</body>
+</html>
