@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokeAPI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png">
+</head>
+<body>
+    
+    <div class="loader-container" id="loader">
+    <div class="pokeball-loader">
+        <div class="pokeball-top"></div>
+        <div class="pokeball-center">
+            <div class="pokeball-inner"></div>
+        </div>
+        <div class="pokeball-bottom"></div>
+    </div>
+    <div>
+        <img src="https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png" alt="Logo PokeAPI" class="loader-logo">
+    </div>
+    <div class="progress-container">
+        <div class="progress-bar" id="progress-bar"></div>
+        <div class="progress-text" id="progress-text">0%</div>
+    </div>
+</div>
+
+    <div class="content" id="content" style="display: none;">
+        <header>
+            <nav class="nav">
+                <div class="logo-container">
+                    <a href="#" class="logo">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png" alt="PokeAPI Logo" class="logo-img">
+                    </a>
+                </div>
+                <div class="nav-wrapper">
+                    <ul class="nav-list">
+                        <li class="nav-item"><button class="btn btn-header" id="ver-todos">Ver todos</button></li> 
+                        <li class="nav-item"><button class="btn btn-header normal" id="normal">Normal</button></li>
+                        <li class="nav-item"><button class="btn btn-header fire" id="fire">Fuego</button></li>
+                        <li class="nav-item"><button class="btn btn-header water" id="water">Agua</button></li>
+                        <li class="nav-item"><button class="btn btn-header grass" id="grass">Planta</button></li>
+                        <li class="nav-item"><button class="btn btn-header electric" id="electric">Eléctrico</button></li>
+                        <li class="nav-item"><button class="btn btn-header ice" id="ice">Hielo</button></li>
+                        <li class="nav-item"><button class="btn btn-header fighting" id="fighting">Lucha</button></li>
+                        <li class="nav-item"><button class="btn btn-header poison" id="poison">Veneno</button></li>
+                        <li class="nav-item"><button class="btn btn-header ground" id="ground">Tierra</button></li>
+                        <li class="nav-item"><button class="btn btn-header flying" id="flying">Volador</button></li>
+                        <li class="nav-item"><button class="btn btn-header psychic" id="psychic">Psíquico</button></li>
+                        <li class="nav-item"><button class="btn btn-header bug" id="bug">Bicho</button></li>
+                        <li class="nav-item"><button class="btn btn-header rock" id="rock">Roca</button></li>
+                        <li class="nav-item"><button class="btn btn-header ghost" id="ghost">Fantasma</button></li>
+                        <li class="nav-item"><button class="btn btn-header dragon" id="dragon">Dragón</button></li>
+                        <li class="nav-item"><button class="btn btn-header steel" id="steel">Acero</button></li>
+                        <li class="nav-item"><button class="btn btn-header fairy" id="fairy">Hada</button></li>
+                    </ul>
+                </div>
+                <button class="nav-toggle" id="navToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Busca un Pokémon por nombre o ID" class="search-bar">
+                <button id="search-btn" class="btn btn-search">
+                    <i class="fas fa-search"></i> Buscar
+                </button>
+                <button id="clear-search" class="btn btn-clear">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </header>
+        
+        <main>
+            <div id="todos">
+                <div class="pokemon-todos" id="listaPokemon">
+                </div>
+            </div>
+            <div class="pagination" id="pagination">
+                <button id="prevPage" class="btn-pagination"><i class="fas fa-chevron-left"></i></button>
+                <span id="pageInfo">Página 1</span>
+                <button id="nextPage" class="btn-pagination"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
